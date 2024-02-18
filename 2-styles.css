@@ -1,0 +1,73 @@
+/* 2-styles.css */
+
+/* Reset default styles for input */
+body, h1, h2, h3, p, div, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  /* Centering the toggle */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Styles for the custom toggle */
+  .toggle {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-cb {
+    display: none;
+  }
+  
+  /* Styles for the checked state */
+  .toggle-label {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background-color: #dbd7d7;
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.5s ease;
+    border: 1px solid gray;
+  }
+  .toggle-label::after {
+    content: "No";
+    position: absolute;
+    padding-left: 45px;
+    padding-top: 4px;
+    font-size: large;
+    transition: content 1s ease;
+  }
+  .toggle-inner {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    border: 1px solid gray;
+    transition: left 0.3s ease;
+  }
+  
+  /* Styles for the unchecked state */
+  .toggle-cb:checked + .toggle-label .toggle-inner {
+    left: 43.5px;
+  }
+  
+  .toggle-cb:checked + .toggle-label::after {
+    content: "Yes";
+    padding-left: 12px;
+  }
+  .toggle-cb:checked + .toggle-label {
+    background-color: #f34848;
+  }
+  

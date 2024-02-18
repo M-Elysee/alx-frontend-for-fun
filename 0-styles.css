@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 250px;
+    padding: 0;
+    background-image: url(./0-sprite.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 40px;
+}
+li {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: medium;
+    padding-top: 10px;
+}
